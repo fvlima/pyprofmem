@@ -44,20 +44,18 @@ def profile_with_memory_usage(sort_type=PROFILE_SORT_CUMULATIVE):
             function
             """
 
-            begin = time()
             mem_initial = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
 
             profile = Profile()
             result = profile.runcall(func, *args, **kwargs)
 
-            end = time()
             mem_final = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
 
             _print_stats(profile, sort_type)
 
-            print('Ran profile_with_memory_usage to {}'.format(func.__name__, (end - begin)))
-            print('Initial RAM: {}'.format(_format_size(mem_initial)))
-            print('Final RAM: {}'.format(_format_size(mem_final)))
+            print('Ran profile_with_memory_usage to %s' % func.__name__)
+            print('Initial RAM: %s ' % _format_size(mem_initial))
+            print('Final RAM: %s' % _format_size(mem_final))
 
             return result
         return wrapped
@@ -101,10 +99,8 @@ def _format_size(size):
     for unit in ('B', 'KiB', 'MiB', 'GiB', 'TiB'):
         if abs(size) < 100 and unit != 'B':
             # 3 digits (xx.x UNIT)
-            # return '{:.1f} {}'.format(size, unit)
             return '%.1f %s' % (size, unit)
         if abs(size) < 10 * 1024 or unit == 'TiB':
             # 4 or 5 digits (xxxx UNIT)
-            # return '{:.0f} {}'.format(size, unit)
             return '%.0f %s' % (size, unit)
         size /= 1024
