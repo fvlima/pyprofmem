@@ -1,3 +1,4 @@
+[![PyPI latest](https://img.shields.io/pypi/v/pyprofmem.svg)](https://pypi.python.org/pypi/pyprofmem)
 [![Build Status](https://travis-ci.org/fvlima/pyprofmem.svg?branch=master)](https://travis-ci.org/fvlima/pyprofmem)
 [![Coverage Status](https://coveralls.io/repos/github/fvlima/pyprofmem/badge.svg)](https://coveralls.io/github/fvlima/pyprofmem)
 
