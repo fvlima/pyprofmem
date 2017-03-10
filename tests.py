@@ -10,7 +10,7 @@ from pyprofmem.decorators import (
 )
 
 
-class StdOut:
+class StdOut(object):
     """Context manager to capture the output of the function calls"""
 
     def __init__(self):
