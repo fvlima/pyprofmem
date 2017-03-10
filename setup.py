@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='pyprofmem',
     version='0.1.0',
-    description='A simple utility decorator to helps developers to see the memory usage and'
+    description='A simple utility decorator to helps developers to see the memory usage and '
                 'profile',
     long_description='A simple utility decorator to helps developers to see the memory usage '
                      'of a determined function and its internal calls. It also provides a '

@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/fvlima/pyprofmem.svg?branch=master)](https://travis-ci.org/fvlima/pyprofmem)
+[![Coverage Status](https://coveralls.io/repos/github/fvlima/pyprofmem/badge.svg)](https://coveralls.io/github/fvlima/pyprofmem)
+
 # pyprofmem
 
 A simple utility decorator to helps developers to see the memory usage of a determined function and its internal calls. It also provides a decorator to see the profile stats usage with memory. In this case, the cProfile implementation will be used.
