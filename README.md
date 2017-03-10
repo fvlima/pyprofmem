@@ -10,6 +10,15 @@ A simple utility decorator to helps developers to see the memory usage of a dete
 
 #### @profile_with_memory_usage 
 
+sort_type parameter options:
+- PROFILE_SORT_CUMULATIVE
+- PROFILE_SORT_CALLS
+- PROFILE_SORT_STDNAME
+- PROFILE_SORT_TIME
+
+by default, the option PROFILE_SORT_CUMULATIVE will be used 
+
+
 ```python
 from concurrent import futures
 from time import sleep
